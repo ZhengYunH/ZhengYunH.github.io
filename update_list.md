@@ -6,5 +6,5 @@
 fork了citicup的内容，上传文件并且重新整理了仓库  
 ---
 2017/9/23
-更新并完成了 [《Markdown简明实用语法参考0.1》](/markdown语法.md)
+更新并完成了 [《Markdown简明实用语法参考0.1》](./各种语法/markdown语法.md)
 ---

@@ -48,7 +48,7 @@
 ##区段元素
 ###链接
 This link is linked to the [source](http://www.appinn.com/markdown/) .
-This links to the [update_list](./update_list.md/) .
+This links to the [update_list](../update_list.md/) .
 ###强调
 *underscores*
 _underscores_
