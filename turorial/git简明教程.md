@@ -164,4 +164,5 @@ __上面的所有操作后面都可以加上`-- dir`表示查看该目录下面�
 + `git grep keys`：在工作目录中所有文件中搜索keys
 + `git grep --cached keys`：在暂存区中所有文件中搜索keys
 ---
-[ref_link](http://www.jianshu.com/p/16ad0722e4cc)
+## Remark:
+ref_link：<http://www.jianshu.com/p/16ad0722e4cc>
