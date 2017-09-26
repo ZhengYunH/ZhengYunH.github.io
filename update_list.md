@@ -21,8 +21,6 @@
     * [泛型](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E6%B3%9B%E5%9E%8B.md)
     * [概念](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E6%A6%82%E5%BF%B5.md)
     * [函数](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E5%87%BD%E6%95%B0.md)
-    
-文档
 + 调整了文件结构
 + 添加了[errno](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/ref/errno.md)
 ---
