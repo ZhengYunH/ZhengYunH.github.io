@@ -15,12 +15,12 @@
 + 增加了新文件夹poj，用于存放poj相应题目，并添加了poj1003-1006
 ---
 2017/9/26
-+ 加入[R_link]()
++ 加入[R_link](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/turorial/R/R_link.md)
 + 转移了高程的笔记，添加了
-    * [标识符]()
-    * [泛型]()
-    * [概念]()
-    * [函数]()
+    * [标识符](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E6%A0%87%E8%AF%86%E7%AC%A6.md)
+    * [泛型](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E6%B3%9B%E5%9E%8B.md)
+    * [概念](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E6%A6%82%E5%BF%B5.md)
+    * [函数](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E5%87%BD%E6%95%B0.md)
 文档
-+ 调整
++ 调整了文件结构
 ---
