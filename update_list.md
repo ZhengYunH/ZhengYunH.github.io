@@ -12,3 +12,13 @@
 + 调整了文件结构
 + 更新并完成了[《git简明教程》](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/turorial/git%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B.md)
 ---
+2017/9/26
++ 加入[R_link]()
++ 转移了高程的笔记，添加了
+    * [标识符]()
+    * [泛型]()
+    * [概念]()
+    * [函数]()
+文档
++ 调整
+---
