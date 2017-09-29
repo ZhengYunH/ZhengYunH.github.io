@@ -25,8 +25,8 @@
 + 添加了[errno](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/ref/errno.md)
 
 ## 2017/9/28  
-+ 阅读Thinking in java,加入笔记
-    * [Controlling Execution](./class/java/Controlling%20Execution(4).md)
++ 阅读Thinking in java,加入笔记  
+    * [Controlling Execution](./class/java/Controlling%20Execution(4).md)
     * [Initializetion and Cleanup(updating)](./class/java/Initialization%20and%20Cleanup(5).md)
 
 ## 2017/9/29  
