@@ -15,7 +15,7 @@
 + 增加了新文件夹poj，用于存放poj相应题目，并添加了poj1003-1006
 
 ## 2017/9/26
-+ 加入[R_link](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/turorial/R/R_link.md)
++ 加入 [R_link](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/turorial/R/R_link.md)
 + 转移了高程的笔记，添加了
     * [标识符](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E6%A0%87%E8%AF%86%E7%AC%A6.md)
     * [泛型](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E6%B3%9B%E5%9E%8B.md)
@@ -23,10 +23,11 @@
     * [函数](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/class/oop/%E5%87%BD%E6%95%B0.md)
 + 调整了文件结构
 + 添加了[errno](https://github.com/ZhengYunH/ZhengYunH.github.io/blob/master/ref/errno.md)
+
 ## 2017/9/28  
 + 阅读Thinking in java,加入笔记
-    * [Controlling Execution](./class/java/Controlling Execution(4).md)
-    * [Initializetion and Cleanup(updating)](./class/java/Initialization and Cleanup(5).md)
+    * [Controlling Execution](./class/java/Controlling%20Execution(4).md)
+    * [Initializetion and Cleanup(updating)](./class/java/Initialization%20and%20Cleanup(5).md)
 
 ## 2017/9/29  
 + 在oop中加入了
