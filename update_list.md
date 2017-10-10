@@ -34,3 +34,21 @@
     * [泛型](./class/oop/泛型.md)
     * [const用法](./class/oop/const.md)
     * [函数的副作用](./class/oop/函数的副作用.md)
+
+## 2017/10/3
++ 阅读Thinking in java,更新笔记  
+    * [Initializetion and Cleanup(updating)](./class/java/Initialization%20and%20Cleanup(5).md)
+
+## 2017/10/4  
++ 阅读Thinking in java,更新笔记  
+    * [Initializetion and Cleanup(updating)](./class/java/Initialization%20and%20Cleanup(5).md)
+
+## 2017/10/5
++ 阅读Thinking in java,更新并完成笔记  
+    * [Initializetion and Cleanup](./class/java/Initialization%20and%20Cleanup(5).md)
+
+## 2017/10/10 
++ 在oop中加入了
+    *  [操作符重载](./class/oop/操作符重载.md)
++ 在graphic中加入了
+    *  [chapter2](./class/graphic/chapter2.md)
