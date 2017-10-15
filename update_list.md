@@ -52,3 +52,15 @@
     *  [操作符重载](./class/oop/操作符重载.md)
 + 在graphic中加入了
     *  [chapter2](./class/graphic/chapter2.md)
+
+## 2017/10/11
++ 在oop中加入了
+    *  [杂项](./class/oop/杂项.md)用于记录平时遇到的问题
+
+## 2017/10/12
++ 阅读Thinking in java,更新笔记  
+    *  [Access Control](./class/java/Access%20Control(6).md)
+
+## 2017/10/15
++ 在oop中完善了
+    *  [操作符重载](./class/oop/操作符重载.md)

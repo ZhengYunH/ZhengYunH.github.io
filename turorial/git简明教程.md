@@ -1,4 +1,5 @@
 # Git简明教程
+![速查表](../ref/git速查表.jpg)
 ## git四大域
 + 工作目录
 + 暂存区
@@ -166,3 +167,13 @@ __上面的所有操作后面都可以加上`-- dir`表示查看该目录下面�
 ---
 ## Remark:
 ref_link：<http://www.jianshu.com/p/16ad0722e4cc>
+
+### 同步一个fork
+ref_link：
+#### 中文
++ <http://blog.csdn.net/qq1332479771/article/details/56087333>
++ <https://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/>
+#### 英文
++ <https://help.github.com/articles/syncing-a-fork/>  
++ <https://help.github.com/articles/configuring-a-remote-for-a-fork/>
+
