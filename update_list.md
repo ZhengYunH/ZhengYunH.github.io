@@ -64,3 +64,7 @@
 ## 2017/10/15
 + 在oop中完善了
     *  [操作符重载](./class/oop/操作符重载.md)
+
+## 2017/10/16
++ 在statistic里加入
+    * [Cramer-Rao bound](./class/statistic/Cramer-Rao bound.md)
