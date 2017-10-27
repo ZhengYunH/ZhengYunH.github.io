@@ -68,3 +68,23 @@
 ## 2017/10/16
 + 在statistic里加入
     * [Cramer-Rao bound](./class/statistic/Cramer-Rao bound.md)
+
+## 2017/10/18
++ 在oop中加入了
+    * [lambda表达式](./class/oop/lambda表达式.md)
+
+## 2017/10/19
++ 在graphic中加入
+    * [图形扫描显示原理(updating)](./class/graphic/图形扫描显示原理.md)
+    * [图形显示结构机理](./class/graphic/图形显示结构机理.md)
+    * [图元生成(updating)](./class/graphic/图元生成.md)
+    * [颜色模型(updating)](./class/graphic/颜色模型.md)
+
+## 2017/10/24
++ 在oop中更新了
+    * [继承](./class/oop/继承.md)  
+
+## 2017/10/24
++ 在oop中更新了
+    * [继承](./class/oop/继承.md)  
+    * [聚集](./class/oop/聚集.md)  

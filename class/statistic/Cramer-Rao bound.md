@@ -8,7 +8,7 @@ $$ I(\theta )={\mathrm  {E}}\left[\left({\frac  {\partial \ell (x;\theta )}{\par
 and $ \ell (x;\theta )=\log(f(x;\theta )) $ is the natural logarithm of the likelihood function and $ \mathrm {E} $ denotes the expected value (over $ x $).  
 The efficiency of an unbiased estimator $ \hat{\theta} $ measures how close this estimator's variance comes to this lower bound; estimator efficiency is defined as  
 $$ e({\hat  {\theta }})={\frac  {I(\theta )^{{-1}}}{{{\rm {var}}}({\hat  {\theta }})}} $$
-or the minimum possible variance for an unbiased estimator divided by its actual variance. The Cramér–Rao lower bound thus gives
+or the minimum possible variance for an · estimator divided by its actual variance. The Cramér–Rao lower bound thus gives
 $$ {\displaystyle e({\hat {\theta }})\leq 1.} $$  
 
 ### General scalar case  
