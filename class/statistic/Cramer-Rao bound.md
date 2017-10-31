@@ -13,7 +13,7 @@ $$ {\displaystyle e({\hat {\theta }})\leq 1.} $$
 
 ### General scalar case  
 A more general form of the bound can be obtained by considering an unbiased estimator $ T(X) $ of the parameter $ \theta $. Here, unbiasedness is understood as stating that $ E [ T(X) ]=\psi (\theta ) $. In this case, the bound is given by
-$$ {\mathrm  {var}}(T)\geq {\frac  {[\psi '(\theta )]^{2}}{I(\theta )}} $$
+$$ {\mathrm  {var}}(T) \geq {\frac  {[\psi '(\theta )]^{2}} {I(\theta )} } $$
 where $ \psi '(\theta ) $ is the derivative of $ \psi (\theta ) $(by $ \theta $), and $ I(\theta ) $ is the Fisher information defined above.
 
 ## Single-parameter proof  
