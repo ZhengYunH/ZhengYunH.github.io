@@ -1,5 +1,5 @@
 # Git简明教程
-![速查表](../ref/git速查表.jpg)
+![git速查表](assets/git速查表.jpg)
 ## git四大域
 + 工作目录
 + 暂存区
@@ -94,7 +94,7 @@ __`HEAD`是指向当前分支引用的指针，该指针指向在该分支上的
 + `git fetch`：下载远程仓库“origin”到本地
 + `git fetch remoterepository`：下载指定远程仓库到本地
 + `git fetch remoterepository branchname`：下载指定远程仓库指定分支到本地
-#### 2. 'pull'
+#### 2. `pull`
 + `git pull remoterepository branchname[:localbranch]`：拉取指定远程仓库指定分支到本地仓库指定分支（默认是当前分支）
 #### 3. `push`
 + `git push remoterepository localbranch[:remotebranch] [--tags]`：推送本地仓库指定分支到远程仓库指定分支（默认是与本地分支同名的远程分支），默认是不推送标签到远程仓库的，加上--tags就会推送标签
