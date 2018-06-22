@@ -1,5 +1,6 @@
 # Java 垃圾回收机制 
-###### 参考：<https://www.cnblogs.com/xiaoxi/p/6486852.html>
+[Java垃圾回收（GC）机制详解]: https://www.cnblogs.com/xiaoxi/p/6486852.html
+
 ## 哪些内存需要回收
 ### 引用计数法
 + 给每个对象添加一个引用计数器counter
