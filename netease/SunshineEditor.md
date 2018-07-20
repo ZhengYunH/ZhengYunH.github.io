@@ -1,58 +1,112 @@
-# SunshineEditor editor_tools
+# SunshineEditor
 
-##  *editor_main.py*
+## Config
 
-编辑器初始化入口
+配置信息
 
- **func**
+### Projects
 
-+ `init(cmdArg)` : 初始化编辑器
+定义项目相关的配置信息
 
-  ```python
-  random.seed(time.time())	#随机种子
-  base.macro.declareVariables()	# 声明变量
-  succ, ip, port, editorName = _checkArg(cmdArg)	# 检查参数
-  
-  ## 根据编辑器的名字添加模块List：moduleList
-  moduleList = baseModule.moduleList
-  for part in ("base", "editorSys", "prepare", editorName):
-  		moduleList.extend(_collectModules(part))
-          
-  newModuleSystemStartup()：
-  ```
+![1531970118450](C:\Users\zhengyunhui\Desktop\doc\ZhengYunH.github.io\netease\assets\1531970118450.png)
+
+```xml
+<g69TextEditor>	<!--项目名称-->
+	<Engine>g69TextEditor</Engine>	<!--对应引擎,在Engine中配置-->
+</g69TextEditor>
+```
+
+### Engine
+
+设定相应项目的启动引擎
+
+```xml
+<g69TextEditor>
+    <ResPath>res\</ResPath>	<!--资源路径-->
+    <ScriptPath>script\</ScriptPath> <!--脚本路径-->
+    <BinPath></BinPath>	<!--二进制文件路径-->
+    <RemoteBootArgs>bin\win32\client.exe %s:%s:text</RemoteBootArgs>  <!--负责启动游戏,两个%s分别表示ip和port,第三个参数是对应编辑器名字,参考script中的editor_main.py-->
+</g69TextEditor>
+```
+
+### Paths
+
+记录项目的运行路径
+
+![1531970136523](C:\Users\zhengyunhui\Desktop\doc\ZhengYunH.github.io\netease\assets\1531970136523.png)
+
+```xml
+<g69TextEditor>C:\Users\zhengyunhui\Desktop\demo\client\</g69TextEditor>
+```
+
+### Config
+
+模板设置
+
+![1531970230126](C:\Users\zhengyunhui\Desktop\doc\ZhengYunH.github.io\netease\assets\1531970230126.png)
+
+```XML
+
+```
 
 
 
-## editor_base
+## ExtPlugin
 
-### *editor_macro.py* 
+加入相应的插件
 
-一些公共接口，import过的模块，全部在全局空间了，其他地方不用重复import
+### Plugin.py
 
-**variable**
+```python
+class TextEditorPlugin(Plugin):
+	NAME = "TextEditor"	#编辑器的名称,可以瞎改,不影响使用
 
-+ `SUNSHINE_META` : dir,editor_base.SunshineClient.Meta	
-+ `SUNSHINE_PLUGIN` : dir,editor_base.SunshineClient.Plugin	相关的插件
-+ `SUNSHINE_STORYLINE` : dir,editor_base.SunshineClient.Storyline
-+ `SunshineClient` : class,editor_tools.editor_base.SunshineClient.SunshineClient
-+ `gSunshineClient = SunshineClient()` : class，编辑器客户端
+	PROPERTIES = {	#一些基本信息
+		"scriptEntry": "main",
+		"editMenu": True,
+		"isStarter": False,
+		"windowTitle": "Sunshine",
+		"requirePlugins": set(),
+		"loadType": Sunshine.LOAD_TYPE_OPTIONAL,
+	}
 
-**func**
+	def __init__(self):
+		super(TextEditorPlugin, self).__init__()
+		self.win = None
 
-+ `declareVariables(environ=None)`：将已经设置好的变量添加到environ中，import时候就调用
-  + `setVariables(name,value)` : 判断变量类型，决定是否加入
+	def initStarter(self, args):
+		pass
 
-### *editor_config_dict.py*
+	def initPlugin(self):	#初始化插件
+		self.rpc = RPCService.CreateRPCConnection(UUID)
 
-配置名字对应的模块，换个角度来看就是进行宏定义，将相应的宏名和模块对应起来，这些模块会被放在`__builtin__`中
+	def createWindows(self, isStarter):	#显示界面
+		self.win = TextEditorWidget(self.rpc)
+		self.rpcHandler = self.win
+		return [self.win]
 
-**variable**
+def getPlugin():	
+	return TextEditorPlugin()
+```
 
-+ moduleDict
-  + base：编辑器基础逻辑
-  + editorSys：base之后需要加载的模块
-  + prepare：紧接着 editorSys之后需要加载的模块
-  + camera：相应功能对应的宏
-  + ...
-  + softbone
+### PluginProperty.py
+
+定义插件的属性
+
+![1531970810588](C:\Users\zhengyunhui\Desktop\doc\ZhengYunH.github.io\netease\assets\1531970810588.png)
+
+```python
+def getPluginProperty():
+	return PluginProperty(
+		name="TextEditor", 
+		requirePlugins={"InnerSync"}, 
+		contact="G69|郑运辉",
+		)
+```
+
+### widget
+
+定义一些相应的挂件,用于显示
+
+
 
