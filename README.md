@@ -7,6 +7,12 @@
 + oop：面向对象程序设计笔记
 + hadoop：关于hadoop系统的记录
 
+## tutorial 一些教程
+
++ git简明教程
++ markdown语法
++ kindle邮件推送
+
 ## fundamental 记录一些问题
 
 - [x] JavaGC：垃圾回收机制
@@ -32,6 +38,5 @@
 + 1004
 + 1005
 + 1006
-
 
 

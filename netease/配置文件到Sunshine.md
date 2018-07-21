@@ -22,3 +22,22 @@
 
 ​								***EditorPlugin***	_callServerFunc
 
+```sequence
+title: 配置文件到Sunshine
+
+participant es_client as ESC
+participant softbone_proxy_manager as SPM
+participant RainbowPlugin as RP
+
+ESC->SPM:loadModels()
+SPM-->SPM:loadInfo() 
+SPM-->SPM:createModelUI()
+SPM->RP:对每一个角色 AddEntity(readId,modelProxy)
+
+
+
+
+```
+
+
+
