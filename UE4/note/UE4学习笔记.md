@@ -4,23 +4,17 @@
 
 ![image-20220106144317652](.\img\image-20220106144317652.png)
 
-## [~~Unreal Engine 4 Beginner's Tutorial (*by Make Games With Katie*)~~](https://www.youtube.com/watch?v=iTwxuahe5B4)  
+# 入门视频
 
-入门视频，能够对UE4和蓝图建立初步认识，总时长不超过十小时
-
-
-
-## [InsideUE4（知乎 ( *by 大钊* ) ）](https://zhuanlan.zhihu.com/p/22813908)
+[~~Unreal Engine 4 Beginner's Tutorial (*by Make Games With Katie*)~~](https://www.youtube.com/watch?v=iTwxuahe5B4)  能够对UE4和蓝图建立初步认识，总时长不超过十小时
 
 
 
-
-
-
+# [InsideUE4（知乎 ( *by 大钊* ) ）](https://zhuanlan.zhihu.com/p/22813908)
 
 ## GamePlay架构
 
-### GamePlay架构（一）Actor和Component
+### [GamePlay架构（一）Actor和Component](http://zhuanlan.zhihu.com/p/22833151)
 
 #### UObject
 
@@ -36,7 +30,7 @@
 
 
 
-### GamePlay架构（二）Level和World
+### [GamePlay架构（二）Level和World](http://zhuanlan.zhihu.com/p/22924838)
 
 #### Level
 
@@ -48,7 +42,7 @@
 
 包含一个主Level，在UE4中叫做Persistent Level
 
-### GamePlay架构（三）WorldContext，GameInstance，Engine
+### [GamePlay架构（三）WorldContext，GameInstance，Engine](https://zhuanlan.zhihu.com/p/23167068)
 
 #### WorldContext
 
@@ -70,7 +64,7 @@ GameInstance里会保存着当前的WorldConext和其他整个游戏的信息
 
 理清Gameplay自底而上的结构Object->Actor+Component->Level->World->WorldContext->GameInstance->Engine。对每一个类型职责以及相互关系有有初步的了解即可。
 
-### GamePlay架构（四）Pawn
+### [GamePlay架构（四）Pawn](https://zhuanlan.zhihu.com/p/23321666)
 
 #### Component
 
@@ -90,7 +84,7 @@ Movement + Collision + Mesh
 
 
 
-### GamePlay架构（五）Controller
+### [GamePlay架构（五）Controller](https://zhuanlan.zhihu.com/p/23480071)
 
 #### AController
 
@@ -128,7 +122,7 @@ Pawn-> Component-Actor-Pawn-Controller
 
 
 
-### GamePlay架构（六）PlayerController和AIController
+### [GamePlay架构（六）PlayerController和AIController](https://zhuanlan.zhihu.com/p/23649987)
 
 #### APlayerController
 
@@ -149,7 +143,7 @@ Pawn-> Component-Actor-Pawn-Controller
 
 
 
-### GamePlay架构（七）GameMode和GameState
+### [GamePlay架构（七）GameMode和GameState](https://zhuanlan.zhihu.com/p/23707588)
 
 #### GameMode
 
@@ -187,7 +181,7 @@ GameMode关心的是构建一个游戏本身的玩法，PlayerController关心�
 
 
 
-### GamePlay架构（八）Player
+### [GamePlay架构（八）Player](https://zhuanlan.zhihu.com/p/23826859)
 
 GameInstance::CreateLocalPlayer
 
@@ -205,7 +199,7 @@ GameInstance::CreateLocalPlayer
 
 
 
-### GamePlay架构（九）GameInstance
+### [GamePlay架构（九）GameInstance](https://zhuanlan.zhihu.com/p/24005952)
 
 接口类型：
 
@@ -216,7 +210,7 @@ GameInstance::CreateLocalPlayer
 
 
 
-### GamePlay架构（十）总结
+### [GamePlay架构（十）总结](https://zhuanlan.zhihu.com/p/24170697/)
 
 对象结构
 
@@ -226,7 +220,7 @@ GameInstance::CreateLocalPlayer
 
 ![img](img/v2-c0cd2e5121f63c37615f78476e2a425c_720w.jpg)
 
-### GamePlay架构（十一）Subsystems
+### [GamePlay架构（十一）Subsystems](https://zhuanlan.zhihu.com/p/158717151)
 
 ![img](img/v2-1a596ce3195ccaf4275b0aa88dedf33e_720w.jpg)
 
@@ -280,7 +274,15 @@ class HELLO_API UMyEditorSubsystem : public UEditorSubsystem{}
 
 
 
-## UE4官方教程
+## UObject（施工ing）
+
+### [UObject（一）开篇](https://zhuanlan.zhihu.com/p/24319968)
+
+
+
+
+
+# UE4官方教程
 
 官方文档
 
@@ -304,7 +306,7 @@ https://docs.unrealengine.com/4.27/zh-CN/
 
 
 
-## UE4命名约定
+# UE4命名约定
 
 - 模版类以T作为前缀，比如TArray,TMap,TSet UObject派生类都以U前缀
 - AActor派生类都以A前缀
@@ -319,19 +321,23 @@ https://docs.unrealengine.com/4.27/zh-CN/
 
 
 
-## 特效模块
+# 其它文档
 
 
 
-## 动画模块
+# 特效模块
 
 
 
-## C++代码撰写（Custom C++ Class）
+# 动画模块
 
 
 
-## Rendering架构
+# C++代码撰写（Custom C++ Class）
+
+
+
+# 渲染架构
 
 
 
