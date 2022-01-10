@@ -215,28 +215,35 @@
 ```
 |-- Content
 	|-- YY62
-		|-- Character
-			|-- Player
-			|-- NPC
-		|-- Core
-		|-- Effects
-		|-- Environment
-			|-- Background
-			|-- Buildings
-			|-- Foliage
-			|-- Props
-			|-- Sky
-			|-- Landscape
-			|-- Water
-		|-- Maps
-			|-- Episode(_Number)
-		|-- MaterialLibrary
-		|-- PostProcess
-		|-- Sound
-		|-- UI
+	|	|-- Character
+	|	|	|-- Player
+	|	|	|-- NPC
+	|	|-- Core
+	|	|	|-- Characters
+	|	|	|-- Engine
+    |   |   |-- GameModes
+    |   |   |-- Interactables
+    |   |   |-- Pickups
+	|	|-- Effects
+	|	|-- Environment
+	|	|	|-- Background
+	|	|	|-- Buildings
+	|	|	|-- Foliage
+	|	|	|-- Props
+	|	|	|-- Sky
+	|	|	|-- Landscape
+	|	|	|-- Water
+	|	|-- Gameplay
+	|	|-- Maps
+	|	|	|-- Episode(_Number)
+	|	|-- MaterialLibrary
+	|	|-- PostProcess
+	|	|-- Sound
+	|	|-- UI
+	|	|-- Vehicles
 	|-- Developers
-		|-- User1
-		|-- User2
+	|	|-- User1
+	|	|-- User2
 
 ```
 
