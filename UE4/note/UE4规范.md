@@ -25,8 +25,8 @@
 | Skeletal Mesh            | SK_Bob            |
 | Texture (Diffuse/Albedo) | T_Bob_D           |
 | Texture (Evil Diffuse)   | T_Bob_Evil_D      |
-| Static Mesh (01)         | S_Rock_01         |
-| Static Mesh (02)         | S_Rock_02         |
+| Static Mesh (01)         | SM_Rock_01        |
+| Static Mesh (02)         | SM_Rock_02        |
 | Material                 | M_Rock            |
 | Material Instance (Snow) | MI_Rock_Snow      |
 
@@ -36,7 +36,7 @@
 
 | 资源类型 Asset Type | 前缀 Prefix | 后缀 Suffix | 备注 Notes                     |
 | ------------------- | ----------- | ----------- | ------------------------------ |
-| Level / Map         |             |             | [所有地图应该放在Maps目录下]() |
+| Level / Map         |             |             | 所有地图应该放在Maps目录下     |
 | Level (Persistent)  |             | _P          |                                |
 | Level (Audio)       |             | _Audio      |                                |
 | Level (Lighting)    |             | _Lighting   |                                |
@@ -201,108 +201,3 @@
 | ----------------------- | ----------- | ----------- | ---------- |
 | Particle System         | PS_         |             |            |
 | Material (Post Process) | PP_         |             |            |
-
-
-
-## 目录结构
-
-> 每个子目录下是否再进行具体的分类：以资源文件名进行划分 or 以文件夹的名字用于划分
->
-> ​	例如：角色c拥有材质M_c，应该组织为 content/character/c/material/mat 还是 content/character/c/M_c
-
-
-
-```
-|-- Content
-	|-- YY62
-	|	|-- Character
-	|	|	|-- Player
-	|	|	|-- NPC
-	|	|-- Core
-	|	|	|-- Characters
-	|	|	|-- Engine
-    |   |   |-- GameModes
-    |   |   |-- Interactables
-    |   |   |-- Pickups
-	|	|-- Effects
-	|	|-- Environment
-	|	|	|-- Background
-	|	|	|-- Buildings
-	|	|	|-- Foliage
-	|	|	|-- Props
-	|	|	|-- Sky
-	|	|	|-- Landscape
-	|	|	|-- Water
-	|	|-- Gameplay
-	|	|-- Maps
-	|	|	|-- Episode(_Number)
-	|	|-- MaterialLibrary
-	|	|-- PostProcess
-	|	|-- Sound
-	|	|-- UI
-	|	|-- Vehicles
-	|-- Developers
-	|	|-- User1
-	|	|-- User2
-
-```
-
-
-
-### 文件夹命名
-
-+ PascalCase大小写规范：所有首字母大写，中间没有任何连接符 `_`。例如 `DesertEagle`, `RocketPistol` , `ASeriesOfWords`
-+ 不要使用空格
-
-+ 不要使用Unicode语言字符或奇怪的符号：也就是只使用`a-z`，`A-Z`， `0-9` 这些符号；不要用`@`, `-`, `_`, `,`, `#`, `*`这种字符，更不要用中文。
-
-### 使用一个顶级目录来保存所有工程资源
-
-+ 所有的工程资源都保存在一个以工程名命名的目录中（例如 `Content / YY62` 目录中）
-+ 对于临时资源，可以使用`开发者目录 Developers`，参照下面的 **用来做临时测试的开发者** 章节中的说明
-+ 范例、模板和商城中的资源都不会污染到项目工程
-+ 便于子版本资源的管理和补丁包
-
-### 用来做临时测试的开发者目录
-
-建立一个`Developers`目录用于个人资源维护，其它人不需使用其中的资源内容。当存在于`Developers`目录中的资源正式准备好时，美术人员将其迁移至正式的工程目录，并修复引用关系
-
-### 所有的地图文件应该保存在一个名为`Maps`的目录中 
-
-通过子目录的方法去组织地图资源，例如建立 `Maps/Campaign1/` 或 `Maps/Arenas`，但最重要的是一定要都放在 `/Content/Project/Maps`。这也有助于产品的打版本工作，把地图放在一个地方，做版本时就很难漏掉某个地图，对于烘培光照贴图或者质量检查都有利。
-
-### 使用`Core`目录存储系统蓝图资源以及其他系统资源
-
-使用`/Content/Project/Core`这个目录用来保存一个工程中最为核心的资源。例如，非常基础的`GameMode`, `Character`, `PlayerController`, `GameState`, `PlayerState`，以及如此相关的一些资源也应该放在这里。
-
-非程序员很少有理由去碰这个目录，如果工程目录结构合理，那么游戏设计师只需要使用子类提供的功能就可以工作，负责场景编辑的员工只需要使用专用的的蓝图就可以，而不用碰到这些基础类。
-
-### 不要创建名为`Assets`或者`AssetTypes`的目录
-
-+ 创建名为`Assets`的目录是多余的
-+ 创建名为`Meshes` 、`Textures`或者`Materials`的目录是多余的：因为资源文件名本身就提供了这些信息，而且使用资源浏览器的过滤功能能够更好的处理这个问题
-
-### 超大资源要有自己的目录结构
-
-对于公用的并且数量巨大的文件，应该被放在同一个文件夹中。当有超过15个以上的资源是同一类型（例如动画和声音资源），就应该新增一个子文件夹用于管理所有的动画文件。
-
-另外，对于角色公用的动画资源应该放在`Characters/Common/Animations`，并且其中应该还有诸如`Locomotion` 或者`Cinematic`的子目录。
-
-### 材质库`MaterialLibrary`
-
-对于任何基础材质，可以被重复使用而不属于特定模型的材质和纹理，应该放在材质库目录下 `Content/Project/MaterialLibrary`
-
-
-
-## 蓝图
-
-
-
-
-
-
-
-
-
-## 代码规范（TODO）
-
