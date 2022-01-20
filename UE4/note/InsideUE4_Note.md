@@ -57,7 +57,7 @@ GameInstance里会保存着当前的WorldConext和其他整个游戏的信息
 #### Component
 
 + Component表达的是“功能”的概念
-+ ·正确理解“功能”和“游戏业务逻辑”的区分是理解Component的关键要点
++ 正确理解“功能”和“游戏业务逻辑”的区分是理解Component的关键要点
 + 一旦你发现你在Component中含有游戏的业务逻辑代码，这就是所谓的“Bad Smell”了
 
 #### Pawn
