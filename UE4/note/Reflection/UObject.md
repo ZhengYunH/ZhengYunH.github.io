@@ -1,5 +1,11 @@
 # UObject（TODO）
 
+> [UE4 UObject管理方式](https://zhuanlan.zhihu.com/p/362228148)
+>
+> [UE4 垃圾回收](https://zhuanlan.zhihu.com/p/67055774)
+
+
+
 要描述UE4的反射机制，首先先得了解UE4中的万物之源UObject
 
 ```c++
@@ -56,7 +62,6 @@ classDiagram
 ```
 
 ```c++
-
 class COREUOBJECT_API UObjectBase
 {
     ...
