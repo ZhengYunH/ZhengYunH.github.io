@@ -259,10 +259,3 @@ class HELLO_API UMyEditorSubsystem : public UEditorSubsystem{}
 1. Subsystem是GamePlay级别的Component
 2. USubsystem只是个普通的UObject
 3. Subsystem是有状态的
-
-
-
-## UObject（施工ing）
-
-### [UObject（一）开篇](https://zhuanlan.zhihu.com/p/24319968)
-
