@@ -82,11 +82,11 @@ protected:
 
 首先需要理清QueuedThreadPoolBase \ QueuedThread \ AsyncTask三者的关系：
 
-UE中自己实现了一个线程池（经典的Queue实现），池中保存着任务队列QueuedWork和线程队列QueuedThreads。
+UE中自己实现了一个线程池QueuedThreadPoolBase （经典的Queue实现），池中保存着任务队列QueuedWork和线程队列QueuedThreads。
 
-根据以上继承和组合关系可以这样描述他们的关系：QueuedThreadPool管理着两个队列，任务队列QueueThread和线程队列IQueueWork，AsynTask是IQueueWork的子类，也就是其中的一种实现。
+根据以上继承和组合关系可以这样描述他们的关系：QueuedThreadPool管理着两个队列，任务队列QueueThread和线程队列IQueueWork，而AsynTask是IQueueWork的子类，也就是其中的一种实现。
 
-类比上面的Runnable，AsyncTask像是被单独抽离出来的Runnable，而不是依托于某个Thread。具体使用哪个Thread，由类似于Manager的QueuedThreadPool进行分发管理。
+类比上面的Runnable，AsyncTask像是被单独抽离出来的Runnable，但不依托于某个Thread（Runnable中需要自己Create Thread）。具体使用哪个Thread，由类似于Manager的QueuedThreadPool进行分发管理。
 
 QueuedThread是由信号驱动的，当来了任务的时候才进行处理，平时都是处于Wait的状态（见FQueuedThread::Run）。
 
@@ -144,13 +144,13 @@ MyTask->EnsureCompletion(); //  Wait until the job is complete
 delete Task;
 ```
 
-其中GetStatId是通用写法，只需要将逻辑是现在DoWork中即可。另外如果想指定Pool，而可以在StartBackgroundTask中传入。
+其中GetStatId是通用写法，只需要将并行逻辑写在DoWork中即可。另外如果想指定Pool，而可以在StartBackgroundTask中传入。
 
 ## TaskGraph
 
 > https://www.cnblogs.com/shiroe/p/14723592.html
 
-TaskGraph是一套更加抽象的异步处理系统，可以处理任务间的顺序和依赖，适合简单的任务（不然可能会阻塞主线程的执行），复杂的任务可以使用Runnable和AsyncTask
+TaskGraph是一套更加抽象的异步处理系统，可以处理任务间的顺序和依赖，适合简单的任务（不然可能会阻塞主线程的执行），复杂的任务应使用Runnable和AsyncTask
 
 #### 定义
 
@@ -160,7 +160,7 @@ template<typename TTask>
 class TGraphTask final : public FBaseGraphTask {}
 ```
 
-类似AsyncTask，TaskGraph也是一个模板加具体执行逻辑的方法类。
+类似AsyncTask，TaskGraph也是在Task中执行具体逻辑。
 
 #### 使用
 
@@ -194,7 +194,7 @@ public:
 FGraphEventRef GraphEventRef = TGraphTask<FTaskGraph_SimpleTask>::CreateTask().ConstructAndDispatchWhenReady(ThreadName);
 ```
 
-创建一个TaskGraph执行的线程需要包括两步：`CreateTask`以及返回对象中的方法（以上为`ConstructAndDispatchWhenReady`）
+创建一个TaskGraph执行的线程需要包括两步（见DoTask）：`CreateTask`以及返回对象中的方法（以上为`ConstructAndDispatchWhenReady`）
 
 对于`CreateTask`中包含两个参数：
 
@@ -208,7 +208,10 @@ TGraphTask::CreateTask()返回的对象中包含两种不同的方法：
 
 利用Prerequisite和`ConstructAndHold`两个方法，就可以建立起任务之间的依赖了。
 
+
+
+最后介绍一个依赖于TaskGraph的并行函数ParallelFor，在引擎很多地方用到，一个Helper函数用于遍历数组。
+
 ## 小结
 
 对于最直接使用多线程的方法，可以直接用FRunnable处理。如果需要用到线程池，可以利用AsyncTask。对于需要处理依赖的任务，使用TaskGraph是最好的选择。
-
